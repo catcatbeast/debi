@@ -204,7 +204,7 @@ hostname=
 network_console=false
 set_debian_version 11
 mirror_protocol=http
-mirror_host=deb.debian.org
+mirror_host=ftp.cn.debian.org
 mirror_directory=/debian
 mirror_proxy=
 security_repository=http://security.debian.org/debian-security
@@ -242,7 +242,7 @@ while [ $# -gt 0 ]; do
     case $1 in
         --cdn|--aws)
             mirror_protocol=https
-            [ "$1" = '--aws' ] && mirror_host=cdn-aws.deb.debian.org
+            [ "$1" = '--aws' ] && mirror_host=cdn-aws.ftp.cn.debian.org
             security_repository=mirror
             ;;
         --china)
